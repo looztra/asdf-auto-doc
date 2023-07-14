@@ -1,26 +1,26 @@
-<div align="center">
+# asdf-gha-auto-doc
 
-# asdf-gha-auto-doc [![Build](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/build.yml/badge.svg)](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/build.yml) [![Lint](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/lint.yml/badge.svg)](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/lint.yml)
+[![Build](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/build.yml/badge.svg)](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/build.yml) [![Lint](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/lint.yml/badge.svg)](https://github.com/looztra/asdf-gha-auto-doc/actions/workflows/lint.yml)
 
 [gha-auto-doc](https://github.com/tj-actions/auto-doc) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
-# Contents
+## Contents
 
-- [Dependencies](#dependencies)
-- [Install](#install)
-- [Contributing](#contributing)
-- [License](#license)
+- [asdf-gha-auto-doc](#asdf-gha-auto-doc)
+  - [Contents](#contents)
+  - [Dependencies](#dependencies)
+  - [Install](#install)
+  - [Contributing](#contributing)
+  - [License](#license)
 
-# Dependencies
-
-**TODO: adapt this section**
+## Dependencies
 
 - `bash`, `curl`, `tar`: generic POSIX utilities.
 - `SOME_ENV_VAR`: set this environment variable in your shell config to load the correct version of tool x.
 
-# Install
+## Install
 
 Plugin:
 
@@ -49,12 +49,12 @@ auto-doc --help
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
 install & manage versions.
 
-# Contributing
+## Contributing
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
 [Thanks goes to these contributors](https://github.com/looztra/asdf-gha-auto-doc/graphs/contributors)!
 
-# License
+## License
 
 See [LICENSE](LICENSE) © [Christophe Furmaniak](https://github.com/looztra/)
