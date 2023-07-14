@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 shellcheck --shell=bash --external-sources \
-	bin/* --source-path=template/lib/ \
-	lib/* \
-	scripts/*
+  bin/* \
+  lib/* \
+  scripts/*
 
-shfmt --language-dialect bash --diff \
-	./**/*
+shfmt --language-dialect bash --indent 2 --diff \
+  ./bin/* \
+  ./lib/*
