@@ -2,9 +2,8 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for gha-auto-doc.
 GH_REPO="https://github.com/tj-actions/auto-doc"
-TOOL_NAME="gha-auto-doc"
+TOOL_NAME="auto-doc"
 TOOL_TEST="auto-doc --help"
 
 fail() {
@@ -14,7 +13,6 @@ fail() {
 
 curl_opts=(-fsSL)
 
-# NOTE: You might want to remove this if gha-auto-doc is not hosted on GitHub releases.
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
   curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
 fi
@@ -31,8 +29,6 @@ list_github_tags() {
 }
 
 list_all_versions() {
-  # TODO: Adapt this. By default we simply list the tag names from GitHub releases.
-  # Change this function if gha-auto-doc has other means of determining installable versions.
   list_github_tags
 }
 
@@ -53,7 +49,6 @@ download_release() {
   platform="$(get_platform)"
   local ext
   ext="$(get_ext)"
-  # TODO: Adapt the release URL convention for gha-auto-doc
   # https://github.com/tj-actions/auto-doc/releases/download/v2.7.1/auto-doc_2.7.1_Linux_x86_64.tar.gz
   url="$GH_REPO/releases/download/v${version}/$(get_tool_cmd)_${version}_${platform}_${arch}${ext}"
 
@@ -74,7 +69,6 @@ install_version() {
     mkdir -p "$install_path"
     cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
 
-    # TODO: Assert gha-auto-doc executable exists.
     local tool_cmd
     tool_cmd="$(get_tool_cmd)"
     test -x "$install_path/$tool_cmd" || fail "Expected $install_path/$tool_cmd to be executable."
