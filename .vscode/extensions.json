@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"EditorConfig.EditorConfig",
+		"yzhang.markdown-all-in-one",
+		"foxundermoon.shell-format",
+		"timonwong.shellcheck",
+	],
+	"unwantedRecommendations": []
+}
