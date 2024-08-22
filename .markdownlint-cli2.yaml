@@ -1,2 +1,5 @@
+---
 globs:
-  - "**/*.md"
+  - '**/*.md'
+  - '!.venv*/**/*.md'
+  - '!CHANGELOG.md'
